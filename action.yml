@@ -1,5 +1,6 @@
 name: Configure AWS ELB Rule
 description: Configures a given ELB Rule
+author: Icalia Labs
 
 branding:
   icon: activity
