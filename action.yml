@@ -1,0 +1,31 @@
+name: Configure AWS ELB Rule
+description: Configures a given ELB Rule
+
+branding:
+  icon: activity
+  color: red
+
+inputs:
+  listener:
+    description: The Amazon Resource Name (ARN) of the listener.
+    required: true
+  conditions:
+    description: The conditions (in JSON array format used by AWS).
+    required: false
+  priority:
+    description: The rule priority. A listener can’t have multiple rules with the same priority.
+    required: false
+  actions:
+    description: The actions.
+    required: false
+  tags:
+    description: The tags to assign to the rule.
+    required: false
+
+outputs:
+  rule-arn:
+    description: ARN of the configured ELB Rule
+
+runs:
+  using: node12
+  main: index.js
